@@ -3,61 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Renê Caldeira — Enterprise IT Architect | Cloud & AI Leadership</title>
-  <meta name="description" content="Executive portfolio & CV of Renê Caldeira — Enterprise IT Architect (EITA), Lead Cloud Architect, and Product Line Architect with 22+ years of experience in enterprise platforms, cloud-native architecture, and AI integration.">
+  <title>Renê Caldeira — Enterprise IT Architect · Professional Dossier</title>
+  <meta name="description" content="Professional architectural ledger and CV of Renê Caldeira: Enterprise IT Architect (EITA), Lead Cloud Architect, and Product Line Architect with 22+ years leading enterprise platforms, cloud systems, and AI integration.">
   <link rel="canonical" href="https://renecaldeira.com.br">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Renê Caldeira — Enterprise IT Architect">
-  <meta property="og:description" content="22+ years in IT architecture, cloud-native platforms, and enterprise AI transformation.">
+  <meta property="og:description" content="22+ years in enterprise IT architecture, cloud platforms, and enterprise AI transformation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://renecaldeira.com.br">
 
-  <!-- Google Fonts -->
+  <!-- Fonts: Space Grotesk (Architectural display) & IBM Plex Sans/Mono (Precision ledger) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ============================================================
-       DESIGN SYSTEM & ARCHITECTURAL TOKENS
+       SWISS ARCHITECTURAL LEDGER THEME (Anti-Slop / Zero-Glow)
+       Grounded in taste-skill & frontend-design principles.
     ============================================================ */
     :root {
-      --canvas: #0b0f19;
-      --canvas-subtle: #0f172a;
-      --surface: #111827;
-      --surface-raised: #172033;
-      --surface-elevated: #1e293b;
-      --border: #263449;
-      --border-accent: #38bdf840;
-      --border-strong: #3b4d68;
+      --canvas: #0e1013;
+      --canvas-subtle: #14171c;
+      --surface: #181c22;
+      --surface-raised: #1f242c;
 
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --text-faint: #64748b;
+      --ink: #f2f3f5;
+      --ink-dim: #cfd4dc;
+      --ink-muted: #8b94a0;
+      --ink-faint: #545d68;
 
-      --cyan: #38bdf8;
-      --cyan-dim: #0284c7;
-      --azure: #0078d4;
-      --azure-deep: #0369a1;
-      --emerald: #34d399;
-      --amber: #fbbf24;
+      /* Structural architectural rules */
+      --rule: #232932;
+      --rule-strong: #363e4b;
+      --rule-bold: #4c5767;
 
-      --glow-cyan: rgba(56, 189, 248, 0.15);
-      --glow-azure: rgba(0, 120, 212, 0.25);
+      /* Singular restrained signal accent: architectural cadmium copper */
+      --signal: #e06836;
+      --signal-hover: #f07b49;
 
-      --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-      --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-      --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+      --font-display: 'Space Grotesk', -apple-system, sans-serif;
+      --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
+      --font-mono: 'IBM Plex Mono', monospace;
 
-      --radius-sm: 6px;
-      --radius-md: 12px;
-      --radius-lg: 20px;
-      --radius-full: 9999px;
-
-      --maxw: 1240px;
-      --pad: clamp(1.25rem, 5vw, 2.5rem);
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --rail-w: 320px;
+      --maxw: 1280px;
+      --pad-x: clamp(1.5rem, 5vw, 4rem);
     }
 
     /* Reset */
@@ -69,35 +61,30 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
       background-color: var(--canvas);
-      color: var(--text);
+      color: var(--ink);
       font-family: var(--font-body);
+      font-size: 16px;
       line-height: 1.6;
     }
 
     body {
       background-color: var(--canvas);
-      background-image: 
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(2, 132, 199, 0.18), transparent 70%),
-        linear-gradient(to right, rgba(38, 52, 73, 0.2) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(38, 52, 73, 0.2) 1px, transparent 1px);
-      background-size: 100% 100%, 48px 48px, 48px 48px;
-      background-position: center top, center center, center center;
+      color: var(--ink);
       min-height: 100vh;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
     ::selection {
-      background: var(--cyan);
-      color: #0b0f19;
+      background: var(--signal);
+      color: #ffffff;
     }
 
     a {
       color: inherit;
       text-decoration: none;
-      transition: color 0.2s ease, border-color 0.2s ease;
+      transition: color 0.15s ease, border-color 0.15s ease;
     }
 
     img {
@@ -105,1560 +92,1249 @@
       max-width: 100%;
     }
 
-    .wrap {
+    /* Document classification header bar */
+    .classification-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px var(--pad-x);
+      background: var(--canvas-subtle);
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .classification-bar .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--signal);
+      font-weight: 600;
+    }
+
+    .classification-bar .badge-live::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--signal);
+    }
+
+    /* Top Shell (Grid with fixed Left Rail & Right Ledger) */
+    .dossier-shell {
+      display: grid;
+      grid-template-columns: var(--rail-w) minmax(0, 1fr);
       max-width: var(--maxw);
       margin: 0 auto;
-      padding-left: var(--pad);
-      padding-right: var(--pad);
+      border-left: 1px solid var(--rule);
+      border-right: 1px solid var(--rule);
+      min-height: calc(100vh - 41px);
     }
 
     /* ============================================================
-       NAVIGATION
+       LEFT RAIL: ARCHITECTURAL MONOGRAPH & INDEX
     ============================================================ */
-    header.site-header {
+    aside.dossier-rail {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(11, 15, 25, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-container {
+      height: calc(100vh);
+      overflow-y: auto;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: space-between;
-      height: 76px;
+      padding: 2.25rem 2rem;
+      border-right: 1px solid var(--rule);
+      background: var(--canvas);
     }
 
-    .brand {
+    .rail-top {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .rail-monogram {
       font-family: var(--font-display);
+      font-size: 1.5rem;
       font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: -0.02em;
-    }
-
-    .brand-badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, var(--surface-raised), var(--surface));
-      border: 1px solid var(--border-accent);
-      color: var(--cyan);
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      font-weight: 600;
-      box-shadow: 0 0 16px var(--glow-cyan);
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-menu a {
-      font-size: 0.92rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      position: relative;
-      padding: 6px 0;
-    }
-
-    .nav-menu a:hover {
-      color: var(--text);
-    }
-
-    .nav-menu a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--cyan);
-      transition: width 0.25s var(--ease);
-    }
-
-    .nav-menu a:hover::after {
-      width: 100%;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.88rem;
-      font-weight: 600;
-      font-family: var(--font-display);
-      cursor: pointer;
-      transition: all 0.2s var(--ease);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--cyan-dim), var(--azure));
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 4px 18px var(--glow-azure);
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(135deg, var(--cyan), var(--cyan-dim));
-      box-shadow: 0 6px 24px var(--glow-cyan);
-      transform: translateY(-1px);
-    }
-
-    .btn-outline {
-      background: var(--surface);
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      background: var(--surface-raised);
-      border-color: var(--cyan);
-      color: var(--cyan);
-      transform: translateY(-1px);
-    }
-
-    /* Mobile toggle */
-    .mobile-btn {
-      display: none;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 8px;
-      border-radius: var(--radius-sm);
-      cursor: pointer;
-    }
-
-    /* ============================================================
-       HERO SECTION
-    ============================================================ */
-    section.hero {
-      padding: clamp(3rem, 7vw, 6rem) 0 4rem;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.35fr 1fr;
-      gap: clamp(2rem, 5vw, 4.5rem);
-      align-items: center;
-    }
-
-    .eyebrow-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      background: rgba(2, 132, 199, 0.12);
-      border: 1px solid var(--border-accent);
-      color: var(--cyan);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-
-    .pulse-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--cyan);
-      box-shadow: 0 0 10px var(--cyan);
-      animation: pulseGlow 2s infinite ease-in-out;
-    }
-
-    @keyframes pulseGlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 4.8vw, 3.8rem);
-      font-weight: 700;
-      line-height: 1.12;
       letter-spacing: -0.03em;
-      margin-bottom: 20px;
-    }
-
-    .hero-title .gradient-text {
-      background: linear-gradient(135deg, #ffffff 40%, var(--cyan) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero-lead {
-      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
-      color: var(--text-muted);
-      line-height: 1.65;
-      margin-bottom: 32px;
-      max-width: 620px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 40px;
-    }
-
-    .hero-portrait-card {
-      position: relative;
-    }
-
-    .portrait-frame {
-      position: relative;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(145deg, var(--surface-raised), var(--surface));
-      border: 1px solid var(--border);
-      padding: 14px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(2, 132, 199, 0.1);
-      overflow: hidden;
-    }
-
-    .portrait-frame::before {
-      content: '';
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: linear-gradient(135deg, var(--border-accent), transparent 60%);
-      border-radius: inherit;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .portrait-img-wrap {
-      position: relative;
-      z-index: 1;
-      border-radius: calc(var(--radius-lg) - 6px);
-      overflow: hidden;
-      aspect-ratio: 4 / 5;
-      background: #0f172a;
-    }
-
-    .portrait-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-      filter: contrast(1.05) brightness(0.98);
-      transition: transform 0.4s var(--ease);
-    }
-
-    .portrait-frame:hover .portrait-img-wrap img {
-      transform: scale(1.03);
-    }
-
-    .portrait-overlay-badge {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      right: 24px;
-      z-index: 2;
-      background: rgba(11, 15, 25, 0.88);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-md);
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .portrait-overlay-badge .role-name {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--text);
-    }
-
-    .portrait-overlay-badge .role-scope {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: var(--cyan);
-    }
-
-    .metrics-bar {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 3rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .metric-card {
-      background: rgba(17, 24, 39, 0.6);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-      transition: border-color 0.2s ease, transform 0.2s ease;
-    }
-
-    .metric-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-2px);
-    }
-
-    .metric-value {
-      font-family: var(--font-display);
-      font-size: 2.1rem;
-      font-weight: 700;
-      color: var(--cyan);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .metric-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    /* ============================================================
-       SECTION HEADINGS
-    ============================================================ */
-    section {
-      padding: 5rem 0;
-      position: relative;
-    }
-
-    .section-header {
-      margin-bottom: 3.5rem;
-    }
-
-    .section-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(1.9rem, 3.2vw, 2.75rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-    }
-
-    .section-sub {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-top: 10px;
-      max-width: 650px;
-    }
-
-    /* ============================================================
-       EXECUTIVE PROFILE & PHILOSOPHY
-    ============================================================ */
-    .profile-card {
-      background: linear-gradient(145deg, var(--surface), rgba(15, 23, 42, 0.8));
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: clamp(2rem, 4vw, 3.25rem);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .profile-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 280px;
-      height: 280px;
-      background: radial-gradient(circle, var(--glow-azure) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .profile-grid {
-      display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 3rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .profile-copy p {
-      font-size: 1.08rem;
-      color: var(--text-muted);
-      margin-bottom: 1.25rem;
-      line-height: 1.7;
-    }
-
-    .profile-copy p strong {
-      color: var(--text);
-    }
-
-    .profile-quote {
-      border-left: 3px solid var(--cyan);
-      padding-left: 18px;
-      margin: 1.75rem 0;
-      font-style: italic;
-      color: #e2e8f0;
-      font-size: 1.1rem;
-    }
-
-    .profile-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .info-tile {
-      background: var(--surface-raised);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-    }
-
-    .info-tile-label {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 8px;
-    }
-
-    .info-tile-content {
-      font-weight: 600;
-      color: var(--text);
-      font-size: 0.98rem;
-    }
-
-    /* ============================================================
-       WORK EXPERIENCE TIMELINE
-    ============================================================ */
-    .timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      position: relative;
-    }
-
-    .timeline-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: clamp(1.8rem, 3.5vw, 2.75rem);
-      transition: all 0.25s var(--ease);
-      position: relative;
-    }
-
-    .timeline-card:hover {
-      border-color: var(--border-accent);
-      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.06);
-    }
-
-    .timeline-card-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(38, 52, 73, 0.6);
-      margin-bottom: 1.75rem;
-    }
-
-    .timeline-role-group h3 {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.01em;
-    }
-
-    .timeline-company {
+      color: var(--ink);
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-top: 4px;
-      font-size: 1.1rem;
-      color: var(--cyan);
+    }
+
+    .rail-monogram .mark {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background: var(--surface-raised);
+      border: 1px solid var(--rule-strong);
+      text-align: center;
+      line-height: 26px;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--signal);
+    }
+
+    .rail-portrait {
+      width: 100%;
+      border: 1px solid var(--rule-strong);
+      background: var(--surface);
+      padding: 6px;
+    }
+
+    .rail-portrait img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 20%;
+      filter: grayscale(100%) contrast(1.1);
+      transition: filter 0.3s ease;
+    }
+
+    .rail-portrait:hover img {
+      filter: grayscale(0%) contrast(1.02);
+    }
+
+    .rail-meta {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      line-height: 1.5;
+      color: var(--ink-muted);
+      border-top: 1px solid var(--rule);
+      padding-top: 1rem;
+    }
+
+    .rail-meta strong {
+      display: block;
+      color: var(--ink);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* Index Nav */
+    nav.rail-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-top: 1px solid var(--rule);
+      padding-top: 1.25rem;
+    }
+
+    .rail-nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 0;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .rail-nav-link:hover {
+      color: var(--signal);
+    }
+
+    .rail-nav-link span.num {
+      color: var(--ink-faint);
+    }
+
+    .rail-footer {
+      border-top: 1px solid var(--rule);
+      padding-top: 1.25rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--ink-faint);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .rail-footer a {
+      color: var(--ink-muted);
+    }
+
+    .rail-footer a:hover {
+      color: var(--signal);
+    }
+
+    /* ============================================================
+       RIGHT CONTENT: THE ARCHITECTURAL LEDGER
+    ============================================================ */
+    main.dossier-ledger {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Ledger Header / Hero */
+    header.ledger-hero {
+      padding: clamp(2.5rem, 5vw, 4.5rem) var(--pad-x);
+      border-bottom: 1px solid var(--rule-strong);
+      background: linear-gradient(to bottom, var(--canvas-subtle), var(--canvas));
+    }
+
+    .doc-identifier {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--signal);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .doc-identifier::before {
+      content: '//';
+      color: var(--ink-faint);
+    }
+
+    h1.hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+
+    h1.hero-name span.last-name {
+      display: block;
+      color: var(--ink-dim);
+    }
+
+    .hero-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .role-pill {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+      background: var(--surface);
+      border: 1px solid var(--rule-strong);
+      padding: 5px 12px;
+    }
+
+    .hero-lede {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--ink-muted);
+      max-width: 780px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-lede strong {
+      color: var(--ink);
       font-weight: 600;
     }
 
-    .timeline-period-badge {
+    .hero-action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .btn-action {
       display: inline-flex;
       align-items: center;
-      padding: 6px 14px;
-      background: var(--surface-raised);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-full);
+      gap: 10px;
+      padding: 10px 20px;
       font-family: var(--font-mono);
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--text-muted);
-    }
-
-    .timeline-period-badge.current {
-      background: rgba(56, 189, 248, 0.12);
-      border-color: var(--border-accent);
-      color: var(--cyan);
-    }
-
-    .timeline-subsections {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-bottom: 1.75rem;
-    }
-
-    .timeline-sub-block {
-      background: rgba(23, 32, 51, 0.5);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-    }
-
-    .timeline-sub-block h4 {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--cyan);
-      margin-bottom: 12px;
-      text-transform: uppercase;
       letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: #0b0d10;
+      border: 1px solid var(--ink);
+      cursor: pointer;
     }
 
-    .timeline-list {
-      list-style: none;
+    .btn-action:hover {
+      background: var(--signal);
+      border-color: var(--signal);
+      color: #ffffff;
     }
 
-    .timeline-list li {
-      position: relative;
-      padding-left: 16px;
-      margin-bottom: 8px;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-      line-height: 1.55;
-    }
-
-    .timeline-list li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--cyan);
-      font-weight: bold;
-      font-size: 1.1rem;
-      line-height: 1.4;
-    }
-
-    .skills-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(38, 52, 73, 0.4);
-    }
-
-    .skill-tag {
-      display: inline-block;
-      padding: 4px 11px;
-      background: var(--surface-raised);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: #cbd5e1;
-      transition: all 0.15s ease;
-    }
-
-    .skill-tag:hover {
-      border-color: var(--cyan);
-      color: var(--cyan);
-      background: rgba(56, 189, 248, 0.08);
-    }
-
-    /* ============================================================
-       ARCHITECTURAL COMPETENCIES (4 PILLARS)
-    ============================================================ */
-    .competencies-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .competency-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 2.25rem;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.25s var(--ease);
-    }
-
-    .competency-card:hover {
-      border-color: var(--border-accent);
-      transform: translateY(-3px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .competency-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, var(--surface-raised), var(--canvas));
-      border: 1px solid var(--border-accent);
-      display: flex;
+    .btn-secondary {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      color: var(--cyan);
-      font-size: 1.35rem;
-    }
-
-    .competency-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    .competency-card p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 18px;
-    }
-
-    .competency-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .pill {
+      gap: 10px;
+      padding: 10px 20px;
       font-family: var(--font-mono);
-      font-size: 0.75rem;
-      padding: 3px 9px;
-      background: var(--surface-raised);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-full);
-      color: var(--cyan);
-    }
-
-    /* ============================================================
-       EDUCATION & ACADEMIC BACKGROUND
-    ============================================================ */
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .edu-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: border-color 0.2s ease;
-    }
-
-    .edu-card:hover {
-      border-color: var(--border-accent);
-    }
-
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 10px;
-    }
-
-    .edu-inst {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      color: var(--cyan);
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--rule-strong);
     }
 
-    .edu-year {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      color: var(--text-faint);
+    .btn-secondary:hover {
+      border-color: var(--ink);
+      color: var(--signal);
     }
 
-    .edu-degree {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.35;
-    }
-
-    /* Languages Card */
-    .lang-section {
-      margin-top: 2rem;
-      background: linear-gradient(135deg, var(--surface-raised), var(--surface));
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 22px 26px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .lang-title {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .lang-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .lang-badge {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      background: var(--canvas);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-full);
-      font-size: 0.88rem;
-      font-weight: 500;
-    }
-
-    .lang-badge strong {
-      color: var(--text);
-    }
-
-    .lang-badge span {
-      color: var(--cyan);
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-    }
-
-    /* ============================================================
-       CONTACT & INQUIRIES
-    ============================================================ */
-    .contact-panel {
-      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(2, 132, 199, 0.22), transparent 80%),
-                  var(--surface);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-lg);
-      padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 3.5rem);
-      text-align: center;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    }
-
-    .contact-panel h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
-    }
-
-    .contact-panel p.contact-sub {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      max-width: 620px;
-      margin: 0 auto 36px;
-    }
-
-    .contact-grid {
+    /* Ledger Sections (Two column: Left Label, Right Substance) */
+    section.ledger-block {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      max-width: 900px;
-      margin: 0 auto 36px;
-      text-align: left;
+      grid-template-columns: 220px minmax(0, 1fr);
+      padding: clamp(2.5rem, 4.5vw, 4rem) var(--pad-x);
+      border-bottom: 1px solid var(--rule);
+      gap: 2.5rem;
     }
 
-    .contact-item {
-      background: var(--surface-raised);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 18px 20px;
-      transition: all 0.2s ease;
+    .block-label {
+      position: sticky;
+      top: 2rem;
+      height: fit-content;
     }
 
-    .contact-item:hover {
-      border-color: var(--cyan);
-      transform: translateY(-2px);
-    }
-
-    .contact-item-label {
+    .block-code {
       font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: var(--cyan);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      color: var(--signal);
       margin-bottom: 6px;
     }
 
-    .contact-item-value {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text);
-      word-break: break-all;
+    .block-heading {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1.2;
     }
 
-    .contact-actions {
+    .block-content {
       display: flex;
-      justify-content: center;
-      gap: 16px;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    /* Executive Bio Text */
+    .bio-text p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--ink-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .bio-text p strong {
+      color: var(--ink);
+    }
+
+    .architectural-manifesto {
+      border-left: 2px solid var(--signal);
+      padding-left: 20px;
+      margin: 1.5rem 0;
+      font-size: 1.12rem;
+      line-height: 1.6;
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    /* Executive Highlights Table */
+    .data-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      border: 1px solid var(--rule);
+      background: var(--surface);
+    }
+
+    .data-matrix th, .data-matrix td {
+      padding: 12px 16px;
+      border: 1px solid var(--rule);
+      text-align: left;
+    }
+
+    .data-matrix th {
+      background: var(--canvas-subtle);
+      color: var(--ink-faint);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .data-matrix td.num {
+      color: var(--signal);
+      font-weight: 600;
+    }
+
+    /* Experience Entries (Ledger Records) */
+    .ledger-entry {
+      border-top: 1px solid var(--rule-strong);
+      padding-top: 1.75rem;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 1rem;
     }
 
-    /* ============================================================
-       FOOTER
-    ============================================================ */
-    footer.site-footer {
-      border-top: 1px solid var(--border);
-      padding: 30px 0;
+    .entry-role h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .entry-company {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--signal);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .entry-date {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--ink-faint);
+      border: 1px solid var(--rule-strong);
+      padding: 4px 10px;
+      background: var(--canvas-subtle);
+    }
+
+    .entry-date.active {
+      border-color: var(--signal);
+      color: var(--signal);
+    }
+
+    /* Sub-disciplines inside role */
+    .discipline-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 1.25rem 0;
+    }
+
+    .discipline-item {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 16px;
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
+    .discipline-title {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding-top: 2px;
+    }
+
+    .discipline-desc {
+      color: var(--ink-dim);
+    }
+
+    .discipline-desc ul {
+      list-style: none;
+    }
+
+    .discipline-desc li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 6px;
+    }
+
+    .discipline-desc li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--signal);
+    }
+
+    .entry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--rule);
+    }
+
+    .tech-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      background: var(--canvas-subtle);
+      border: 1px solid var(--rule);
+      color: var(--ink-muted);
+    }
+
+    /* Competencies Grid (Stark Architectural Grid) */
+    .pillar-ledger {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--rule-strong);
+      border: 1px solid var(--rule-strong);
+    }
+
+    .pillar-cell {
+      background: var(--canvas);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pillar-cell h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+
+    .pillar-cell p {
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .pillar-keys {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--signal);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Education Ledger List */
+    .edu-ledger {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .edu-row {
+      display: grid;
+      grid-template-columns: 140px 180px minmax(0, 1fr);
+      gap: 16px;
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--rule);
+      align-items: baseline;
+    }
+
+    .edu-row:last-child {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .edu-period {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--ink-faint);
+    }
+
+    .edu-school {
+      font-family: var(--font-mono);
       font-size: 0.88rem;
-      color: var(--text-faint);
+      font-weight: 600;
+      color: var(--signal);
     }
 
-    .footer-content {
+    .edu-title {
+      font-size: 0.98rem;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    /* Languages strip */
+    .languages-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      margin-top: 1.5rem;
+    }
+
+    .lang-item {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    .lang-item strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+
+    .lang-item span {
+      color: var(--signal);
+    }
+
+    /* Contact Ledger */
+    .contact-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid var(--rule-strong);
+    }
+
+    .contact-table tr {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .contact-table td {
+      padding: 14px 18px;
+      font-size: 0.95rem;
+    }
+
+    .contact-table td.col-label {
+      width: 180px;
+      background: var(--canvas-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-faint);
+    }
+
+    .contact-table td.col-val {
+      color: var(--ink);
+      font-family: var(--font-mono);
+    }
+
+    .contact-table td.col-val a:hover {
+      color: var(--signal);
+    }
+
+    /* Footer */
+    footer.dossier-footer {
+      padding: 2rem var(--pad-x);
+      border-top: 1px solid var(--rule-strong);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 16px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink-faint);
     }
 
-    .footer-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-links a:hover {
-      color: var(--cyan);
+    footer.dossier-footer a:hover {
+      color: var(--signal);
     }
 
     /* ============================================================
-       RESPONSIVE & ACCESSIBILITY
+       RESPONSIVE DESIGN (Desktop Rail -> Mobile Stack)
     ============================================================ */
-    @media (max-width: 960px) {
-      .hero-grid {
+    @media (max-width: 980px) {
+      .dossier-shell {
         grid-template-columns: 1fr;
+        border: none;
       }
-      .portrait-frame {
-        max-width: 360px;
-        margin: 0 auto;
-      }
-      .metrics-bar {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .profile-grid {
-        grid-template-columns: 1fr;
-      }
-      .competencies-grid, .edu-grid {
-        grid-template-columns: 1fr;
-      }
-    }
 
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
+      aside.dossier-rail {
+        position: relative;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--rule-strong);
+        padding: 2rem var(--pad-x);
       }
-      .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-        background: var(--surface);
-        padding: 24px;
-        border-bottom: 1px solid var(--border);
-        gap: 16px;
+
+      .rail-portrait {
+        max-width: 200px;
+        margin: 1rem 0;
       }
-      .mobile-btn {
-        display: block;
+
+      section.ledger-block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
-      .metrics-bar {
-        grid-template-columns: 1fr 1fr;
+
+      .block-label {
+        position: relative;
+        top: 0;
+      }
+
+      .discipline-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .pillar-ledger {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .languages-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-table td.col-label {
+        width: 120px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+      * {
         scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- ============================================================
-       NAVIGATION HEADER
-  ============================================================ -->
-  <header class="site-header">
-    <div class="wrap nav-container">
-      <a href="#top" class="brand">
-        <span class="brand-badge">RC</span>
-        <span>Renê Caldeira</span>
-      </a>
+  <!-- Document Classification Bar -->
+  <div class="classification-bar">
+    <div>// DOSSIER: EITA-2026-RC</div>
+    <div class="badge-live">VERIFIED ARCHITECTURAL LEDGER</div>
+    <div>INDAIATUBA / SP — BRAZIL</div>
+  </div>
 
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#competencies">Competencies</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.44c-.95 0-1.72.77-1.72 1.72s.77 1.72 1.72 1.72 1.72-.77 1.72-1.72-.77-1.72-1.72-1.72Z"/>
-          </svg>
-          <span>LinkedIn</span>
+  <div class="dossier-shell">
+    <!-- ============================================================
+         LEFT RAIL: ARCHITECTURAL INDEX & IDENTITY
+    ============================================================ -->
+    <aside class="dossier-rail">
+      <div class="rail-top">
+        <a href="#top" class="rail-monogram">
+          <span class="mark">RC</span>
+          <span>Renê Caldeira</span>
         </a>
-        <a href="#contact" class="btn btn-primary">Connect</a>
-        <button class="mobile-btn" id="mobileToggle" aria-label="Toggle navigation menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
+
+        <div class="rail-portrait">
+          <img src="avatar.jpg" alt="Renê Caldeira, Enterprise IT Architect">
+        </div>
+
+        <div class="rail-meta">
+          <strong>RENÊ DE OLIVEIRA CALDEIRA</strong>
+          Enterprise IT Architect (EITA)<br>
+          Lead Cloud Architect<br>
+          Product Line Architect
+        </div>
+
+        <nav class="rail-nav" aria-label="Dossier Index">
+          <a href="#profile" class="rail-nav-link">
+            <span>Profile</span>
+            <span class="num">01</span>
+          </a>
+          <a href="#experience" class="rail-nav-link">
+            <span>Experience</span>
+            <span class="num">02</span>
+          </a>
+          <a href="#competencies" class="rail-nav-link">
+            <span>Capabilities</span>
+            <span class="num">03</span>
+          </a>
+          <a href="#education" class="rail-nav-link">
+            <span>Education</span>
+            <span class="num">04</span>
+          </a>
+          <a href="#contact" class="rail-nav-link">
+            <span>Inquiries</span>
+            <span class="num">05</span>
+          </a>
+        </nav>
       </div>
-    </div>
-  </header>
 
-  <main id="top">
+      <div class="rail-footer">
+        <div>REVISION 2026.09</div>
+        <div>HOSTED: <a href="https://renecaldeira.com.br">renecaldeira.com.br</a></div>
+        <div>NETWORK: <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer">in/renecaldeira</a></div>
+      </div>
+    </aside>
+
     <!-- ============================================================
-         HERO SECTION
+         RIGHT LEDGER: DETAILED PROFESSIONAL DOSSIER
     ============================================================ -->
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="eyebrow-badge">
-              <span class="pulse-dot"></span>
-              <span>Enterprise IT Architect · Cloud · AI</span>
-            </div>
+    <main class="dossier-ledger" id="top">
 
-            <h1 class="hero-title">
-              Architecting <span class="gradient-text">resilient systems</span> for enterprise scale &amp; AI transformation.
-            </h1>
+      <!-- Hero Header -->
+      <header class="ledger-hero">
+        <div class="doc-identifier">EXECUTIVE IT ARCHITECTURE DOSSIER</div>
 
-            <p class="hero-lead">
-              I am <strong>Renê Caldeira</strong>, an Enterprise IT Architect (EITA), Lead Cloud Architect, and Product Line Architect with <strong>22+ years</strong> driving digital transformation, cloud-native architecture, and enterprise AI enablement across LATAM.
+        <h1 class="hero-name">
+          Renê
+          <span class="last-name">Caldeira</span>
+        </h1>
+
+        <div class="hero-roles">
+          <span class="role-pill">ENTERPRISE IT ARCHITECT (EITA)</span>
+          <span class="role-pill">LEAD CLOUD ARCHITECT</span>
+          <span class="role-pill">PRODUCT LINE ARCHITECT</span>
+        </div>
+
+        <p class="hero-lede">
+          With over <strong>22 years of experience in IT</strong>, I bridge corporate business strategy, high-scale distributed systems, and enterprise generative AI integration across complex international organizations.
+        </p>
+
+        <div class="hero-action-bar">
+          <a href="mailto:renedeoliveiracaldeira@gmail.com" class="btn-action">
+            Initiate Contact
+          </a>
+          <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            LinkedIn Record ↗
+          </a>
+        </div>
+      </header>
+
+      <!-- Section 01: Profile & Metrics -->
+      <section class="ledger-block" id="profile">
+        <div class="block-label">
+          <div class="block-code">SECTION 01</div>
+          <h2 class="block-heading">Executive Profile</h2>
+        </div>
+
+        <div class="block-content">
+          <div class="bio-text">
+            <p>
+              I hold a bachelor's degree in <strong>Telecommunications Engineering</strong>, a postgraduate degree in <strong>Mobile Application &amp; Video Game Development</strong>, and <strong>two MBAs</strong> in IT Project Management and Solution Architecture.
             </p>
-
-            <div class="hero-actions">
-              <a href="#experience" class="btn btn-primary">Explore Career Experience</a>
-              <a href="#contact" class="btn btn-outline">Start a Conversation</a>
-            </div>
+            <blockquote class="architectural-manifesto">
+              &ldquo;Sustainable enterprise systems are not born from chasing technology trends; they emerge when strategic architecture guardrails empower software engineering teams to execute with velocity, reliability, and cost-efficiency.&rdquo;
+            </blockquote>
+            <p>
+              Currently leading enterprise architectural governance across commercial product lines at <strong>Corteva Agriscience</strong>, directing on-premises monolith dehydration to Azure, and orchestrating enterprise-wide artificial intelligence capabilities.
+            </p>
           </div>
 
-          <div class="hero-portrait-card">
-            <div class="portrait-frame">
-              <div class="portrait-img-wrap">
-                <img src="avatar.jpg" alt="Renê Caldeira — Enterprise IT Architect">
-              </div>
-              <div class="portrait-overlay-badge">
-                <div>
-                  <div class="role-name">Renê Caldeira</div>
-                  <div class="role-scope">Indaiatuba/SP · Brazil</div>
-                </div>
-                <span class="pulse-dot" title="Active"></span>
-              </div>
-            </div>
-          </div>
+          <!-- Metrics Matrix -->
+          <table class="data-matrix" aria-label="Career Metrics">
+            <thead>
+              <tr>
+                <th>Scope Metric</th>
+                <th>Classification</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="num">22+ YEARS</td>
+                <td>Industry Experience</td>
+                <td>Architecture, governance &amp; delivery across web, mobile, desktop, IVR &amp; cloud</td>
+              </tr>
+              <tr>
+                <td class="num">4 DEGREES</td>
+                <td>Academic Foundation</td>
+                <td>2 MBAs (Solution Architecture &amp; Project Mgmt) + Telecom &amp; Software Eng.</td>
+              </tr>
+              <tr>
+                <td class="num">LATAM</td>
+                <td>Geographic Scope</td>
+                <td>Cross-functional leadership across Brazil and Latin America enterprise markets</td>
+              </tr>
+              <tr>
+                <td class="num">AI &amp; COPILOT</td>
+                <td>Frontier Delivery</td>
+                <td>Enterprise ChatGPT, Microsoft Copilot governance &amp; platform integration</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 02: Career Record -->
+      <section class="ledger-block" id="experience">
+        <div class="block-label">
+          <div class="block-code">SECTION 02</div>
+          <h2 class="block-heading">Career Record</h2>
         </div>
 
-        <!-- Highlights / Metrics Bar -->
-        <div class="metrics-bar" aria-label="Career statistics">
-          <div class="metric-card">
-            <div class="metric-value">22+</div>
-            <div class="metric-label">Years IT Architecture &amp; Delivery</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">4</div>
-            <div class="metric-label">Academic Degrees &amp; Dual MBAs</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">LATAM</div>
-            <div class="metric-label">Enterprise Product Line Scope</div>
-          </div>
-          <div class="metric-card">
-            <div class="metric-value">AI</div>
-            <div class="metric-label">Enterprise Copilot &amp; LLM Lead</div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="block-content">
 
-    <!-- ============================================================
-         EXECUTIVE PROFILE & STRATEGY
-    ============================================================ */
-    <section id="about">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-tag">01 · Executive Summary</div>
-          <h2 class="section-title">Strategic Vision Translated into Engineering Execution</h2>
-          <p class="section-sub">Bridging business strategy, complex systems integration, and modern engineering guardrails.</p>
-        </div>
-
-        <div class="profile-card">
-          <div class="profile-grid">
-            <div class="profile-copy">
-              <p>
-                With over <strong>22 years of experience in IT</strong>, I have established a comprehensive background in architecture, strategic management, and software development spanning web, mobile, desktop, IVR, and multi-cloud ecosystems.
-              </p>
-              <p>
-                My foundation combines a bachelor's degree in <strong>Telecommunications Engineering</strong> from PUC-Campinas, a postgraduate specialization in <strong>Mobile Applications &amp; Video Game Development</strong>, and two distinct MBAs: <strong>Solution Architecture</strong> (FIAP) and <strong>IT Project Management</strong> (Laureate Education).
-              </p>
-              <blockquote class="profile-quote">
-                &ldquo;Enterprise architecture succeeds when strategic governance and software engineering principles reinforce one another — enabling teams to build resilient, cost-efficient, and AI-augmented platforms.&rdquo;
-              </blockquote>
-              <p>
-                Currently serving as <strong>Enterprise Solutions Architect for LATAM at Corteva Agriscience</strong>, leading architectural governance across commercial product lines, driving cloud microservices dehydration, and directing enterprise-wide generative AI adoption.
-              </p>
-            </div>
-
-            <div class="profile-sidebar">
-              <div class="info-tile">
-                <div class="info-tile-label">Primary Roles</div>
-                <div class="info-tile-content">Enterprise IT Architect (EITA) · Lead Cloud Architect · Product Line Architect</div>
-              </div>
-
-              <div class="info-tile">
-                <div class="info-tile-label">Specializations</div>
-                <div class="info-tile-content">Cloud-Native (Azure/AWS/GCP), AI Enablement, DevSecOps, SRE, FinOps, TOGAF &amp; SAFe</div>
-              </div>
-
-              <div class="info-tile">
-                <div class="info-tile-label">Enterprise Integrations</div>
-                <div class="info-tile-content">SAP S/4HANA, Salesforce, Adobe Experience Manager (AEM), Apache Kafka</div>
-              </div>
-
-              <div class="info-tile">
-                <div class="info-tile-label">Location &amp; Mobility</div>
-                <div class="info-tile-content">Indaiatuba/SP, Brazil · Available for LATAM &amp; Global Initiatives</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         WORK EXPERIENCE
-    ============================================================ -->
-    <section id="experience">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-tag">02 · Career Trajectory</div>
-          <h2 class="section-title">Enterprise Architecture &amp; Technical Leadership</h2>
-          <p class="section-sub">A verified track record of guiding tier-1 enterprises through high-stakes cloud transformations.</p>
-        </div>
-
-        <div class="timeline">
           <!-- 1. Corteva Agriscience -->
-          <article class="timeline-card">
-            <div class="timeline-card-header">
-              <div class="timeline-role-group">
+          <article class="ledger-entry">
+            <div class="entry-header">
+              <div class="entry-role">
                 <h3>Enterprise Solutions Architect — LATAM</h3>
-                <div class="timeline-company">
-                  <span>Corteva Agriscience</span>
+                <div class="entry-company">Corteva Agriscience</div>
+              </div>
+              <span class="entry-date active">MAY 2023 — PRESENT</span>
+            </div>
+
+            <div class="discipline-group">
+              <div class="discipline-item">
+                <div class="discipline-title">Enterprise Architecture</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Maintain consistency of enterprise architectural principles across Corteva's commercial product lines.</li>
+                    <li>Establish architectural standards and guardrails for cloud software development, including tools, frameworks, and languages.</li>
+                    <li>Design reference architectures and blueprints for enterprise software development.</li>
+                    <li>Direct IT process management over cybersecurity, data privacy, solution architecture, and software development teams.</li>
+                  </ul>
                 </div>
               </div>
-              <span class="timeline-period-badge current">MAY 2023 — PRESENT</span>
-            </div>
 
-            <div class="timeline-subsections">
-              <div class="timeline-sub-block">
-                <h4>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                  Enterprise Architecture
-                </h4>
-                <ul class="timeline-list">
-                  <li>Maintain consistency of enterprise architectural principles across Corteva's commercial product lines.</li>
-                  <li>Identify opportunities arising from emerging technology trends; establish standards and guardrails for cloud software development.</li>
-                  <li>Design reference architectures and blueprints for enterprise software systems.</li>
-                  <li>Advance enterprise-wide AI capabilities and applications (Copilot, ChatGPT).</li>
-                  <li>Oversee IT process management across cybersecurity, data privacy, and engineering teams.</li>
-                </ul>
+              <div class="discipline-item">
+                <div class="discipline-title">Technical Leadership</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Lead interviewing, hiring, and onboarding of architecture and engineering teams across LATAM.</li>
+                    <li>Manage and present PDCA/Continuous Improvement processes, test pyramids, quality metrics, observability, and DevSecOps.</li>
+                    <li>Provide technical leadership in digital products for commercial buying, selling, and precision farming.</li>
+                  </ul>
+                </div>
               </div>
 
-              <div class="timeline-sub-block">
-                <h4>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                  Leadership &amp; Delivery
-                </h4>
-                <ul class="timeline-list">
-                  <li>Interview, hire, and onboard architecture and software engineering talent.</li>
-                  <li>Lead PDCA / Continuous Improvement cycles, test pyramid standards, quality metrics, observability, and DevSecOps.</li>
-                  <li>Provide technical leadership for digital products serving buying, selling, and precision agriculture.</li>
-                  <li>Direct internal and external multidisciplinary engineering teams across LATAM.</li>
-                </ul>
-              </div>
-
-              <div class="timeline-sub-block">
-                <h4>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                  Product Line Architecture
-                </h4>
-                <ul class="timeline-list">
-                  <li>Architectural lead for cloud integrations involving <strong>SAP S/4HANA, Salesforce</strong>, and <strong>Adobe Experience Manager (AEM)</strong>.</li>
-                  <li>Lead "Make or Buy" evaluations, risk mitigation, and architectural oversight for major commercial initiatives.</li>
-                  <li>Execute on-premises monolith dehydration into decoupled microservices clusters in Microsoft Azure.</li>
-                  <li>Formulate IT governance frameworks, situational walls, architectural MVPs, responsibility matrices, and roadmaps.</li>
-                </ul>
+              <div class="discipline-item">
+                <div class="discipline-title">Product Line Systems</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Architectural lead for cloud integrations with <strong>SAP S/4HANA, Salesforce</strong>, and <strong>Adobe Experience Manager (AEM)</strong>.</li>
+                    <li>Lead "Make or Buy" evaluations and architectural oversight on all LATAM commercial initiatives.</li>
+                    <li>Execute on-premises dehydration of monoliths into microservices groups inside Microsoft Azure.</li>
+                    <li>Design and supervise enterprise AI initiatives with Microsoft Copilot and ChatGPT platforms.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <div class="skills-tags">
-              <span class="skill-tag">Microsoft Azure</span>
-              <span class="skill-tag">Enterprise Architecture</span>
-              <span class="skill-tag">Cloud-Native</span>
-              <span class="skill-tag">TOGAF</span>
-              <span class="skill-tag">SAP S/4HANA</span>
-              <span class="skill-tag">Salesforce</span>
-              <span class="skill-tag">Adobe AEM</span>
-              <span class="skill-tag">AI Governance</span>
-              <span class="skill-tag">Copilot &amp; ChatGPT</span>
-              <span class="skill-tag">SRE</span>
-              <span class="skill-tag">FinOps</span>
-              <span class="skill-tag">DORA</span>
-              <span class="skill-tag">SAFe</span>
-              <span class="skill-tag">Lean Six Sigma</span>
+            <div class="entry-tags">
+              <span class="tech-tag">Microsoft Azure</span>
+              <span class="tech-tag">TOGAF</span>
+              <span class="tech-tag">SAP S/4HANA</span>
+              <span class="tech-tag">Salesforce</span>
+              <span class="tech-tag">Adobe AEM</span>
+              <span class="tech-tag">AI Governance</span>
+              <span class="tech-tag">Copilot / ChatGPT</span>
+              <span class="tech-tag">FinOps</span>
+              <span class="tech-tag">SRE</span>
+              <span class="tech-tag">DORA</span>
+              <span class="tech-tag">SAFe</span>
+              <span class="tech-tag">Lean Six Sigma</span>
             </div>
           </article>
 
           <!-- 2. CI&T -->
-          <article class="timeline-card">
-            <div class="timeline-card-header">
-              <div class="timeline-role-group">
+          <article class="ledger-entry">
+            <div class="entry-header">
+              <div class="entry-role">
                 <h3>Lead Solutions Architect</h3>
-                <div class="timeline-company">
-                  <span>CI&amp;T</span>
+                <div class="entry-company">CI&amp;T</div>
+              </div>
+              <span class="entry-date">MAR 2020 — APR 2023</span>
+            </div>
+
+            <div class="discipline-group">
+              <div class="discipline-item">
+                <div class="discipline-title">Digital Transformation</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Spearheaded digital transformation for large financial institutions, implementing DevSecOps and Lean practices.</li>
+                    <li>Managed enterprise AI initiatives using CI&amp;T's proprietary AI platform (Flow).</li>
+                    <li>Constructed microservices architectural topologies across public and private clouds (Azure and IBM ICP).</li>
+                    <li>Executed on-premises to cloud migrations and legacy monolith dehydration.</li>
+                  </ul>
                 </div>
               </div>
-              <span class="timeline-period-badge">MAR 2020 — APR 2023</span>
-            </div>
 
-            <div class="timeline-subsections">
-              <div class="timeline-sub-block">
-                <h4>Digital Transformation &amp; Cloud</h4>
-                <ul class="timeline-list">
-                  <li>Led digital transformation for top-tier financial institutions, establishing DevSecOps and Lean practices.</li>
-                  <li>Architected and managed enterprise AI initiatives utilizing CI&amp;T's AI platform Flow.</li>
-                  <li>Executed on-premises to cloud migrations on Microsoft Azure and private cloud infrastructure (IBM ICP).</li>
-                  <li>Spearheaded monolith dehydration into resilient microservices topologies.</li>
-                </ul>
-              </div>
-
-              <div class="timeline-sub-block">
-                <h4>Distributed Systems &amp; Governance</h4>
-                <ul class="timeline-list">
-                  <li>Engineered event-driven architectures leveraging Apache Kafka and IBM Event Streams.</li>
-                  <li>Implemented hexagonal architecture, micro-frontends, and secure RESTful microservices.</li>
-                  <li>Established corporate reference architectures alongside client executive architect teams.</li>
-                  <li>Led technical governance, GMUD processes, performance testing, and proof-of-concepts (POCs).</li>
-                </ul>
+              <div class="discipline-item">
+                <div class="discipline-title">Distributed Systems</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Designed event-driven architectures utilizing Apache Kafka and IBM Event Streams.</li>
+                    <li>Implemented hexagonal architecture, micro-frontends, and secure RESTful service meshes.</li>
+                    <li>Established reference architectures in direct alignment with client corporate enterprise architects.</li>
+                    <li>Conducted technical coaching on SAFe, Lean Digital, DORA metrics, and Site Reliability Engineering.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <div class="skills-tags">
-              <span class="skill-tag">.NET Core</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">Microsoft Azure</span>
-              <span class="skill-tag">AWS</span>
-              <span class="skill-tag">GCP</span>
-              <span class="skill-tag">Apache Kafka</span>
-              <span class="skill-tag">IBM Cloud</span>
-              <span class="skill-tag">CI&amp;T Flow AI</span>
-              <span class="skill-tag">Hexagonal Architecture</span>
-              <span class="skill-tag">Micro-Frontends</span>
-              <span class="skill-tag">SAFe</span>
-              <span class="skill-tag">DevSecOps</span>
+            <div class="entry-tags">
+              <span class="tech-tag">.NET Core</span>
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Apache Kafka</span>
+              <span class="tech-tag">IBM Event Streams</span>
+              <span class="tech-tag">Microsoft Azure</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">GCP</span>
+              <span class="tech-tag">IBM Cloud</span>
+              <span class="tech-tag">Hexagonal Architecture</span>
+              <span class="tech-tag">Micro-Frontends</span>
+              <span class="tech-tag">SAFe</span>
+              <span class="tech-tag">DevSecOps</span>
             </div>
           </article>
 
           <!-- 3. Veloe -->
-          <article class="timeline-card">
-            <div class="timeline-card-header">
-              <div class="timeline-role-group">
+          <article class="ledger-entry">
+            <div class="entry-header">
+              <div class="entry-role">
                 <h3>Cloud Solutions Architect</h3>
-                <div class="timeline-company">
-                  <span>Veloe</span>
+                <div class="entry-company">Veloe</div>
+              </div>
+              <span class="entry-date">JAN 2019 — FEB 2020</span>
+            </div>
+
+            <div class="discipline-group">
+              <div class="discipline-item">
+                <div class="discipline-title">AWS &amp; Serverless</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Aligned IT infrastructure roadmaps directly with corporate strategic objectives and rapid business growth.</li>
+                    <li>Architected and deployed microservices and serverless solutions within Amazon Web Services (AWS).</li>
+                    <li>Supported core solution architecture for WebApp, Mobile App, and growth-hacking platforms.</li>
+                  </ul>
                 </div>
               </div>
-              <span class="timeline-period-badge">JAN 2019 — FEB 2020</span>
-            </div>
 
-            <div class="timeline-subsections">
-              <div class="timeline-sub-block">
-                <h4>AWS Cloud &amp; Serverless Solutions</h4>
-                <ul class="timeline-list">
-                  <li>Aligned enterprise IT roadmaps directly with corporate strategic growth goals.</li>
-                  <li>Designed and deployed scalable microservices and serverless architectures in Amazon Web Services (AWS).</li>
-                  <li>Supported core solution architecture for WebApps, mobile applications, and growth-hacking platforms.</li>
-                </ul>
-              </div>
-
-              <div class="timeline-sub-block">
-                <h4>Performance, Availability &amp; FinOps</h4>
-                <ul class="timeline-list">
-                  <li>Architected computational models focused on runtime optimization, 99.99% availability, and infrastructure cost reduction (FinOps).</li>
-                  <li>Administered change management (GMUDs), performance benchmark tests, and architectural roadmaps.</li>
-                  <li>Implemented corporate DevSecOps pipelines and architectural debt reduction programs.</li>
-                </ul>
+              <div class="discipline-item">
+                <div class="discipline-title">Optimization &amp; FinOps</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Engineered solutions focused on transaction latency reduction, high availability, and cloud cost containment (FinOps).</li>
+                    <li>Organized GMUDs, stress testing, proof-of-concepts, and architectural roadmap reviews.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <div class="skills-tags">
-              <span class="skill-tag">Amazon Web Services (AWS)</span>
-              <span class="skill-tag">Serverless</span>
-              <span class="skill-tag">Microservices</span>
-              <span class="skill-tag">Cloud Optimization (FinOps)</span>
-              <span class="skill-tag">Mobile &amp; WebApp</span>
-              <span class="skill-tag">DevSecOps</span>
+            <div class="entry-tags">
+              <span class="tech-tag">Amazon Web Services</span>
+              <span class="tech-tag">Serverless</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">FinOps</span>
+              <span class="tech-tag">Mobile Platforms</span>
+              <span class="tech-tag">DevSecOps</span>
             </div>
           </article>
 
           <!-- 4. Mutant -->
-          <article class="timeline-card">
-            <div class="timeline-card-header">
-              <div class="timeline-role-group">
+          <article class="ledger-entry">
+            <div class="entry-header">
+              <div class="entry-role">
                 <h3>SR Software Architect / Tech Lead</h3>
-                <div class="timeline-company">
-                  <span>Mutant</span>
+                <div class="entry-company">Mutant</div>
+              </div>
+              <span class="entry-date">JUN 2017 — DEC 2018</span>
+            </div>
+
+            <div class="discipline-group">
+              <div class="discipline-item">
+                <div class="discipline-title">Client Engineering</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Accountable for tier-1 client accounts: Telecom (Vivo), Insurance (Mapfre, Bradesco Seguros), and Banking (Riachuelo Credit, Bradesco).</li>
+                    <li>Technical leadership for IVR engineering squads developing on Avaya and Genesys platforms.</li>
+                  </ul>
                 </div>
               </div>
-              <span class="timeline-period-badge">JUN 2017 — DEC 2018</span>
-            </div>
 
-            <div class="timeline-subsections">
-              <div class="timeline-sub-block">
-                <h4>Mission-Critical Client Solutions</h4>
-                <ul class="timeline-list">
-                  <li>Technical leadership for key accounts: Telecom (Vivo), Insurance (Mapfre &amp; Bradesco Seguros), and Banking (Riachuelo Credit &amp; Bradesco).</li>
-                  <li>Directed engineering squads developing high-throughput IVR systems in Avaya and Genesys using Java &amp; JS.</li>
-                </ul>
-              </div>
-
-              <div class="timeline-sub-block">
-                <h4>Enterprise Integration &amp; APIs</h4>
-                <ul class="timeline-list">
-                  <li>Designed and deployed mission-critical REST and SOAP API integrations between customer interfaces and legacy backends.</li>
-                  <li>Acted as primary architectural focal point between client enterprise teams and Mutant engineering squads.</li>
-                </ul>
+              <div class="discipline-item">
+                <div class="discipline-title">Integrations &amp; APIs</div>
+                <div class="discipline-desc">
+                  <ul>
+                    <li>Architected REST and SOAP API integrations connecting high-volume telephony with legacy core banking systems.</li>
+                    <li>Acted as principal architectural focal point for client solution architecture and security teams.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <div class="skills-tags">
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">REST &amp; SOAP APIs</span>
-              <span class="skill-tag">Avaya</span>
-              <span class="skill-tag">Genesys</span>
-              <span class="skill-tag">Telecommunications</span>
-              <span class="skill-tag">Legacy System Integration</span>
+            <div class="entry-tags">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">REST &amp; SOAP</span>
+              <span class="tech-tag">Avaya</span>
+              <span class="tech-tag">Genesys</span>
+              <span class="tech-tag">Telecommunications</span>
+              <span class="tech-tag">Core Banking Integrations</span>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============================================================
-         ARCHITECTURAL COMPETENCIES (4 PILLARS)
-    ============================================================ -->
-    <section id="competencies">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-tag">03 · Competencies &amp; Pillars</div>
-          <h2 class="section-title">Core Architectural Disciplines</h2>
-          <p class="section-sub">A balanced matrix of technology leadership, cloud engineering, and systemic governance.</p>
+        </div>
+      </section>
+
+      <!-- Section 03: Competencies -->
+      <section class="ledger-block" id="competencies">
+        <div class="block-label">
+          <div class="block-code">SECTION 03</div>
+          <h2 class="block-heading">Core Disciplines</h2>
         </div>
 
-        <div class="competencies-grid">
-          <div class="competency-card">
-            <div class="competency-icon">☁️</div>
-            <h3>Cloud-Native &amp; Distributed Systems</h3>
-            <p>
-              Design of highly available, resilient multi-cloud infrastructures across Azure, AWS, and GCP. Deep expertise in microservices topologies, event-driven streaming with Kafka, serverless, and decoupled domain-driven design.
-            </p>
-            <div class="competency-pills">
-              <span class="pill">Microsoft Azure</span>
-              <span class="pill">AWS</span>
-              <span class="pill">GCP</span>
-              <span class="pill">Kafka</span>
-              <span class="pill">Microservices</span>
-              <span class="pill">Hexagonal Architecture</span>
-            </div>
-          </div>
-
-          <div class="competency-card">
-            <div class="competency-icon">🧠</div>
-            <h3>Enterprise AI &amp; Copilot Integration</h3>
-            <p>
-              Directing adoption of generative AI, large language models (LLMs), OpenAI APIs, and Microsoft Copilot within enterprise business processes and digital product platforms under strict privacy and cybersecurity guardrails.
-            </p>
-            <div class="competency-pills">
-              <span class="pill">OpenAI &amp; Copilot</span>
-              <span class="pill">ChatGPT Enterprise</span>
-              <span class="pill">AI Governance</span>
-              <span class="pill">CI&amp;T Flow</span>
-              <span class="pill">Prompt Architecture</span>
-            </div>
-          </div>
-
-          <div class="competency-card">
-            <div class="competency-icon">🏛️</div>
-            <h3>Enterprise Architecture &amp; Governance</h3>
-            <p>
-              Establishing enterprise architectural principles, situational walls, architectural MVPs, reference blueprints, and architectural roadmaps. Proven TOGAF application and complex enterprise migrations (SAP, Salesforce, AEM).
-            </p>
-            <div class="competency-pills">
-              <span class="pill">TOGAF</span>
-              <span class="pill">Reference Architecture</span>
-              <span class="pill">SAP S/4HANA</span>
-              <span class="pill">Salesforce</span>
-              <span class="pill">Adobe AEM</span>
-              <span class="pill">Tech Debt Management</span>
-            </div>
-          </div>
-
-          <div class="competency-card">
-            <div class="competency-icon">⚡</div>
-            <h3>Engineering Leadership, SRE &amp; FinOps</h3>
-            <p>
-              Bridging IT operational excellence with financial governance. Cultivating DevSecOps culture, DORA metrics, test pyramids, observability, continuous improvement (PDCA/Lean Six Sigma), and cloud cost reduction.
-            </p>
-            <div class="competency-pills">
-              <span class="pill">Site Reliability Engineering</span>
-              <span class="pill">FinOps</span>
-              <span class="pill">DevSecOps</span>
-              <span class="pill">DORA Metrics</span>
-              <span class="pill">PDCA</span>
-              <span class="pill">SAFe</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         EDUCATION & ACADEMICS
-    ============================================================ -->
-    <section id="education">
-      <div class="wrap">
-        <div class="section-header">
-          <div class="section-tag">04 · Academic Foundation</div>
-          <h2 class="section-title">Education &amp; Postgraduate Qualifications</h2>
-          <p class="section-sub">A solid engineering foundation paired with advanced specialized master's degrees.</p>
-        </div>
-
-        <div class="edu-grid">
-          <div class="edu-card">
-            <div>
-              <div class="edu-header">
-                <span class="edu-inst">FIAP</span>
-                <span class="edu-year">2020 — 2021</span>
+        <div class="block-content">
+          <div class="pillar-ledger">
+            <div class="pillar-cell">
+              <div>
+                <h4>Cloud &amp; Distributed Systems</h4>
+                <p>Multi-cloud strategy across Microsoft Azure, AWS, and GCP. Decoupled microservices, event-driven streaming with Apache Kafka, serverless, and hexagonal architecture patterns.</p>
               </div>
-              <div class="edu-degree">MBA in Solution Architecture</div>
+              <div class="pillar-keys">AZURE · AWS · KAFKA · MICROSERVICES</div>
             </div>
-            <p style="color:var(--text-muted);font-size:0.92rem;margin-top:12px;">Advanced modern solution design, cloud computing patterns, microservices, and enterprise scalability.</p>
-          </div>
 
-          <div class="edu-card">
-            <div>
-              <div class="edu-header">
-                <span class="edu-inst">Laureate Education</span>
-                <span class="edu-year">2018 — 2019</span>
+            <div class="pillar-cell">
+              <div>
+                <h4>Enterprise AI &amp; Copilot</h4>
+                <p>Enterprise integration of large language models (LLMs), Microsoft Copilot, and OpenAI APIs. Establishing corporate AI guardrails, security boundaries, and productivity adoption.</p>
               </div>
-              <div class="edu-degree">MBA in IT Project Management</div>
+              <div class="pillar-keys">COPILOT · CHATGPT · AI GOVERNANCE</div>
             </div>
-            <p style="color:var(--text-muted);font-size:0.92rem;margin-top:12px;">Strategic IT delivery, agile methodologies, PMBOK, Lean Digital governance, and risk mitigation.</p>
-          </div>
 
-          <div class="edu-card">
-            <div>
-              <div class="edu-header">
-                <span class="edu-inst">FMU</span>
-                <span class="edu-year">2014 — 2016</span>
+            <div class="pillar-cell">
+              <div>
+                <h4>Architecture Governance &amp; TOGAF</h4>
+                <p>Formulating enterprise reference architectures, situational walls, architectural MVPs, roadmaps, and managing complex product line integrations (SAP S/4HANA, Salesforce, Adobe AEM).</p>
               </div>
-              <div class="edu-degree">Engineer’s Degree in Mobile Applications &amp; Video Game Development</div>
+              <div class="pillar-keys">TOGAF · SAP · SALESFORCE · AEM</div>
             </div>
-            <p style="color:var(--text-muted);font-size:0.92rem;margin-top:12px;">Mobile app architectures, native runtimes, interactive engine design, and cross-platform performance.</p>
-          </div>
 
-          <div class="edu-card">
-            <div>
-              <div class="edu-header">
-                <span class="edu-inst">PUC - Campinas</span>
-                <span class="edu-year">2001 — 2007</span>
+            <div class="pillar-cell">
+              <div>
+                <h4>SRE, DevSecOps &amp; FinOps</h4>
+                <p>Operational resilience paired with financial prudence. Implementing DORA metrics, test pyramids, observability pipelines, continuous improvement (PDCA/Lean Six Sigma), and cloud cost governance.</p>
               </div>
-              <div class="edu-degree">Bachelor's Degree in Electrical, Electronics &amp; Communications Engineering</div>
+              <div class="pillar-keys">SRE · FINOPS · DEVSECOPS · DORA</div>
             </div>
-            <p style="color:var(--text-muted);font-size:0.92rem;margin-top:12px;">Telecommunications, signals and systems, networked computing, protocols, and digital electronics.</p>
           </div>
         </div>
+      </section>
 
-        <!-- Languages Banner -->
-        <div class="lang-section">
-          <div class="lang-title">Language Proficiencies</div>
-          <div class="lang-badges">
-            <div class="lang-badge">
+      <!-- Section 04: Academic Background -->
+      <section class="ledger-block" id="education">
+        <div class="block-label">
+          <div class="block-code">SECTION 04</div>
+          <h2 class="block-heading">Academic Record</h2>
+        </div>
+
+        <div class="block-content">
+          <div class="edu-ledger">
+            <div class="edu-row">
+              <span class="edu-period">2020 — 2021</span>
+              <span class="edu-school">FIAP</span>
+              <span class="edu-title">MBA in Solution Architecture</span>
+            </div>
+
+            <div class="edu-row">
+              <span class="edu-period">2018 — 2019</span>
+              <span class="edu-school">Laureate Education</span>
+              <span class="edu-title">MBA in IT Project Management</span>
+            </div>
+
+            <div class="edu-row">
+              <span class="edu-period">2014 — 2016</span>
+              <span class="edu-school">FMU</span>
+              <span class="edu-title">Engineer’s Degree in Mobile Applications &amp; Video Game Development</span>
+            </div>
+
+            <div class="edu-row">
+              <span class="edu-period">2001 — 2007</span>
+              <span class="edu-school">PUC - Campinas</span>
+              <span class="edu-title">Bachelor's Degree in Electrical, Electronics and Communications Engineering</span>
+            </div>
+          </div>
+
+          <div class="languages-strip">
+            <div class="lang-item">
               <strong>English</strong>
-              <span>Fluent</span>
+              <span>Fluent / Professional</span>
             </div>
-            <div class="lang-badge">
+            <div class="lang-item">
               <strong>Portuguese</strong>
-              <span>Native / Fluent</span>
+              <span>Native Language</span>
             </div>
-            <div class="lang-badge">
+            <div class="lang-item">
               <strong>Spanish</strong>
-              <span>Intermediate</span>
+              <span>Intermediate Competence</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ============================================================
-         CONTACT & INQUIRIES
-    ============================================================ -->
-    <section id="contact">
-      <div class="wrap">
-        <div class="contact-panel">
-          <div class="section-tag" style="color:var(--cyan);margin-bottom:8px;">05 · Direct Contact</div>
-          <h2>Let's Discuss Enterprise Architecture</h2>
-          <p class="contact-sub">Available for architectural advisement, strategic enterprise consultations, and cloud transformation leadership.</p>
+      <!-- Section 05: Contact & Inquiries -->
+      <section class="ledger-block" id="contact">
+        <div class="block-label">
+          <div class="block-code">SECTION 05</div>
+          <h2 class="block-heading">Direct Contact</h2>
+        </div>
 
-          <div class="contact-grid">
-            <div class="contact-item">
-              <div class="contact-item-label">Direct Email</div>
-              <div class="contact-item-value">
-                <a href="mailto:renedeoliveiracaldeira@gmail.com">renedeoliveiracaldeira@gmail.com</a>
-              </div>
-            </div>
+        <div class="block-content">
+          <table class="contact-table">
+            <tbody>
+              <tr>
+                <td class="col-label">Direct Email</td>
+                <td class="col-val">
+                  <a href="mailto:renedeoliveiracaldeira@gmail.com">renedeoliveiracaldeira@gmail.com</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-label">Telephone / WA</td>
+                <td class="col-val">
+                  <a href="tel:+5511987789168">+55 11 98778-9168</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-label">Location Base</td>
+                <td class="col-val">Indaiatuba, São Paulo — Brazil</td>
+              </tr>
+              <tr>
+                <td class="col-label">LinkedIn Profile</td>
+                <td class="col-val">
+                  <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer">linkedin.com/in/renecaldeira</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="col-label">Web Canonical</td>
+                <td class="col-val">
+                  <a href="https://renecaldeira.com.br">https://renecaldeira.com.br</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-            <div class="contact-item">
-              <div class="contact-item-label">Phone / WhatsApp</div>
-              <div class="contact-item-value">
-                <a href="tel:+5511987789168">+55 11 98778-9168</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-item-label">Location</div>
-              <div class="contact-item-value">Indaiatuba/SP — Brazil</div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-item-label">LinkedIn</div>
-              <div class="contact-item-value">
-                <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer">in/renecaldeira</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-actions">
-            <a href="mailto:renedeoliveiracaldeira@gmail.com" class="btn btn-primary">Send an Email</a>
-            <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">View LinkedIn Profile</a>
+          <div style="margin-top: 1rem;">
+            <a href="mailto:renedeoliveiracaldeira@gmail.com" class="btn-action">
+              Send an Email Directly
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer class="site-footer">
-    <div class="wrap footer-content">
-      <div>
-        &copy; <span id="year"></span> <strong>Renê Caldeira</strong>. All rights reserved. Enterprise IT Architect.
-      </div>
-      <div class="footer-links">
-        <a href="https://renecaldeira.com.br">renecaldeira.com.br</a>
-        <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="#top">Back to Top ↑</a>
-      </div>
-    </div>
-  </footer>
+      <!-- Footer -->
+      <footer class="dossier-footer">
+        <div>&copy; <span id="year">2026</span> Renê Caldeira · Enterprise IT Architecture</div>
+        <div>
+          <a href="#top">Back to Top ↑</a>
+        </div>
+      </footer>
 
-  <!-- ============================================================
-       SCRIPT
-  ============================================================ -->
+    </main>
+  </div>
+
   <script>
-    // Set dynamic year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile nav menu toggle
-    const toggleBtn = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
-
-    if (toggleBtn && navMenu) {
-      toggleBtn.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-
-      // Close menu on link click
-      navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('active');
-        });
-      });
-    }
   </script>
 </body>
 </html>
