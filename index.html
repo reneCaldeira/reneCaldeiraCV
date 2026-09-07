@@ -217,6 +217,27 @@
       margin-bottom: 2px;
     }
 
+    .rail-resume-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background: var(--surface);
+      border: 1px solid var(--rule-strong);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ink);
+      transition: all 0.15s ease;
+    }
+
+    .rail-resume-btn:hover {
+      background: var(--surface-raised);
+      border-color: var(--signal);
+      color: var(--signal);
+    }
+
     /* Index Nav */
     nav.rail-nav {
       display: flex;
@@ -846,6 +867,11 @@
           Product Line Architect
         </div>
 
+        <a href="resume.pdf" download="Resume_ReneCaldeira_en-US.pdf" class="rail-resume-btn">
+          <span>Resume / CV (PDF)</span>
+          <span style="color:var(--signal);">↓</span>
+        </a>
+
         <nav class="rail-nav" aria-label="Dossier Index">
           <a href="#profile" class="rail-nav-link">
             <span>Profile</span>
@@ -904,6 +930,9 @@
         <div class="hero-action-bar">
           <a href="mailto:renedeoliveiracaldeira@gmail.com" class="btn-action">
             Initiate Contact
+          </a>
+          <a href="resume.pdf" download="Resume_ReneCaldeira_en-US.pdf" class="btn-secondary">
+            Download Resume (PDF) ↓
           </a>
           <a href="https://www.linkedin.com/in/renecaldeira/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
             LinkedIn Record ↗
@@ -1312,12 +1341,21 @@
                   <a href="https://renecaldeira.com.br">https://renecaldeira.com.br</a>
                 </td>
               </tr>
+              <tr>
+                <td class="col-label">Curriculum / CV</td>
+                <td class="col-val">
+                  <a href="resume.pdf" download="Resume_ReneCaldeira_en-US.pdf" style="color:var(--signal);">Download Full Resume (PDF) ↓</a>
+                </td>
+              </tr>
             </tbody>
           </table>
 
-          <div style="margin-top: 1rem;">
+          <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 14px;">
             <a href="mailto:renedeoliveiracaldeira@gmail.com" class="btn-action">
               Send an Email Directly
+            </a>
+            <a href="resume.pdf" download="Resume_ReneCaldeira_en-US.pdf" class="btn-secondary">
+              Download Resume (PDF) ↓
             </a>
           </div>
         </div>
