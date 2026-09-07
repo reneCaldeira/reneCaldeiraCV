@@ -185,19 +185,20 @@
       border: 1px solid var(--rule-strong);
       background: var(--surface);
       padding: 6px;
+      overflow: hidden;
     }
 
     .rail-portrait img {
       width: 100%;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 1 / 1.05;
       object-fit: cover;
-      object-position: center 20%;
-      filter: grayscale(100%) contrast(1.1);
-      transition: filter 0.3s ease;
+      object-position: center top;
+      filter: contrast(1.04);
+      transition: filter 0.3s ease, transform 0.3s ease;
     }
 
     .rail-portrait:hover img {
-      filter: grayscale(0%) contrast(1.02);
+      transform: scale(1.04);
     }
 
     .rail-meta {
