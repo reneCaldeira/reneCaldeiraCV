@@ -69,15 +69,15 @@
 - **FMU** (2014 - 2016): Engineer's degree in Mobile Applications & Video Game Development
 - **PUC - Campinas** (2001 - 2007): Bachelor's Degree in Electrical, Electronics and Communications Engineering
 
-## 5. Website Redesign Objectives
-- **Aesthetic Direction**: Replace the artisanal graphic design & photographer styling (warm terracotta/vintage editorial) with a premier, authoritative **Enterprise Technology & Cloud Architecture** executive portfolio.
-- **Theme Tokens**: High-end enterprise tech dark mode: deep obsidian/slate canvas (`#0b0f19`), crisp cool architectural cyan/azure accents (`#0078d4`, `#06b6d4`, `#38bdf8`), subtle grid lines, crisp typography.
-- **Components & Layout**:
-  1. Executive Hero with clear Enterprise Architect positioning, metrics (22+ years, 4 MBAs/Degrees, Tier-1 Enterprises), and direct contact/LinkedIn links.
-  2. Executive Summary & Philosophy (Bridging business strategy, enterprise systems, and AI integration).
-  3. Interactive/Timeline Work Experience (Corteva Agriscience, CI&T, Veloe, Mutant) detailing Enterprise Architecture, Leadership, and Product Line Architecture.
-  4. Architectural Competencies & Pillars (Cloud & Microservices, AI & Copilot, Enterprise Governance & TOGAF, FinOps & SRE).
-  5. Academic Background & Education (FIAP, Laureate, FMU, PUC-Campinas).
-  6. Contact & Professional Inquiries with direct links, phone, email, and LinkedIn.
-- **Assets**: Extracted authentic portrait `avatar.jpg` located in workspace root.
-- **Performance**: Retain zero-dependency vanilla HTML/CSS/JS with smooth animations, high accessibility, and mobile responsiveness.
+## 5. Website Architecture & Current Style
+- **Aesthetic Direction**: Swiss Architectural Dossier (`#0b0e14` background, `#121722` surfaces, `#00e5a3` signal green accent, monospace data ledgers, serif/display headings).
+- **Zero Frameworks**: Single static `index.html` + `avatar.jpg` + `resume.pdf`.
+
+## 6. Current Task: Mobile Responsiveness Refinement
+- **Issue**: Desktop rail (`aside.dossier-rail`) stacks vertically as an 800px tall block on mobile viewports (<860px), pushing the primary hero below the fold.
+- **Issues to Resolve**:
+  1. Top classification bar wraps and collides on 360-390px screens.
+  2. Sidebar rail should become a compact mobile header on screens <860px (avatar + name/title + horizontal scrollable nav chip bar).
+  3. Action buttons (`INITIATE CONTACT` and `DOWNLOAD RESUME (PDF) ↓`) should stack vertically (full width) on <640px to prevent truncation.
+  4. Role pills in hero (`.role-pill`) should wrap properly and adjust padding/font-size.
+  5. Data matrix / tables (`.data-matrix`, `.contact-table`) should format cleanly without horizontal squishing or overflow of long email/text.

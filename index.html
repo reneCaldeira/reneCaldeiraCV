@@ -773,31 +773,47 @@
       color: var(--signal);
     }
 
+    /* Contact Action Bar (Base) */
+    .contact-action-bar {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
     /* ============================================================
-       RESPONSIVE DESIGN (Desktop Rail -> Mobile Stack)
+       RESPONSIVE DESIGN (Desktop Rail -> Tablet Stack -> Mobile Dossier Header)
     ============================================================ */
     @media (max-width: 980px) {
       .dossier-shell {
         grid-template-columns: 1fr;
         border: none;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
       }
 
       aside.dossier-rail {
         position: relative;
         height: auto;
+        min-height: 0;
         border-right: none;
         border-bottom: 1px solid var(--rule-strong);
         padding: 2rem var(--pad-x);
+        overflow: visible;
+        width: 100%;
+        min-width: 0;
       }
 
-      .rail-portrait {
-        max-width: 200px;
-        margin: 1rem 0;
+      main.dossier-ledger {
+        min-width: 0;
+        width: 100%;
       }
 
       section.ledger-block {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        min-width: 0;
       }
 
       .block-label {
@@ -825,6 +841,335 @@
 
       .contact-table td.col-label {
         width: 120px;
+      }
+    }
+
+    /* Compact Mobile Architectural Header & Layout (<= 860px) */
+    @media (max-width: 860px) {
+      :root {
+        --pad-x: 1.25rem;
+      }
+
+      html, body {
+        max-width: 100vw;
+        overflow-x: clip;
+      }
+
+      .classification-bar {
+        padding: 8px var(--pad-x);
+        gap: 10px;
+        font-size: 0.65rem;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+      }
+
+      .classification-bar > div {
+        min-width: 0;
+      }
+
+      .classification-bar .badge-live {
+        flex-shrink: 0;
+      }
+
+      aside.dossier-rail {
+        padding: 1rem var(--pad-x) 0.85rem;
+        background: var(--canvas);
+      }
+
+      .rail-top {
+        gap: 0.85rem;
+        min-width: 0;
+        width: 100%;
+      }
+
+      .rail-monogram {
+        gap: 8px;
+        font-size: 1.15rem;
+        line-height: 1.2;
+      }
+
+      .rail-monogram .mark {
+        width: 25px;
+        height: 25px;
+        line-height: 23px;
+        font-size: 0.72rem;
+      }
+
+      .rail-identity {
+        display: grid;
+        grid-template-columns: 68px minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        width: 100%;
+      }
+
+      .rail-portrait {
+        width: 68px;
+        height: 68px;
+        max-width: none;
+        margin: 0;
+        padding: 3px;
+        flex-shrink: 0;
+      }
+
+      .rail-portrait img {
+        width: 60px;
+        height: 60px;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .rail-meta {
+        min-width: 0;
+        padding-top: 0;
+        border-top: 0;
+        font-size: 0.70rem;
+        line-height: 1.4;
+      }
+
+      .rail-meta strong {
+        margin-bottom: 2px;
+        font-size: 0.76rem;
+        line-height: 1.25;
+      }
+
+      .rail-resume-btn {
+        display: none;
+      }
+
+      nav.rail-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0.7rem 0 0 0;
+        border-top: 1px solid var(--rule);
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: none;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      nav.rail-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .rail-nav-link {
+        flex: 0 0 auto;
+        justify-content: center;
+        gap: 8px;
+        padding: 5px 10px;
+        border: 1px solid var(--rule-strong);
+        background: var(--surface);
+        font-size: 0.70rem;
+        letter-spacing: 0.03em;
+      }
+
+      .rail-nav-link span.num {
+        color: var(--signal);
+      }
+
+      .rail-footer {
+        display: none;
+      }
+
+      header.ledger-hero {
+        padding: 2.25rem var(--pad-x) 2.5rem;
+        min-width: 0;
+        width: 100%;
+      }
+
+      h1.hero-name {
+        font-size: clamp(2.2rem, 11vw, 3.5rem);
+        min-width: 0;
+        word-break: break-word;
+      }
+
+      .hero-roles {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 1.25rem;
+        min-width: 0;
+        width: 100%;
+      }
+
+      .role-pill {
+        display: inline-block;
+        max-width: 100%;
+        font-size: 0.70rem;
+        line-height: 1.35;
+        padding: 4px 8px;
+        white-space: normal;
+        word-break: break-word;
+      }
+
+      .hero-lede {
+        font-size: 1rem;
+        line-height: 1.6;
+        min-width: 0;
+      }
+
+      .entry-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .entry-role,
+      .entry-role h3 {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .entry-role h3 {
+        font-size: 1.25rem;
+        line-height: 1.25;
+      }
+
+      .entry-date {
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+    }
+
+    /* Full-width Stacked Actions & Mobile Cards (<= 640px) */
+    @media (max-width: 640px) {
+      .hero-action-bar,
+      .contact-action-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .hero-action-bar .btn-action,
+      .hero-action-bar .btn-secondary,
+      .contact-action-bar .btn-action,
+      .contact-action-bar .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        box-sizing: border-box;
+      }
+
+      /* Data Matrix: Turn table into clean architectural cards on mobile */
+      .data-matrix {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        border: none;
+        margin-top: 1.25rem;
+      }
+
+      .data-matrix thead {
+        display: none;
+      }
+
+      .data-matrix tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .data-matrix tr {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 12px 14px;
+        background: var(--surface);
+        border: 1px solid var(--rule-strong);
+        border-left: 3px solid var(--signal);
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .data-matrix td {
+        border: none;
+        padding: 0;
+        width: 100%;
+      }
+
+      .data-matrix td.num {
+        color: var(--signal);
+        font-family: var(--font-mono);
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .data-matrix td:nth-child(2) {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--ink-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .data-matrix td:nth-child(3) {
+        font-size: 0.85rem;
+        color: var(--ink-dim);
+        line-height: 1.45;
+        margin-top: 2px;
+      }
+
+      /* Contact Table: Clean stacked layout */
+      .contact-table,
+      .contact-table tbody,
+      .contact-table tr,
+      .contact-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .contact-table tr {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .contact-table td.col-label {
+        width: 100%;
+        padding: 10px 14px 2px;
+        background: transparent;
+        border-bottom: none;
+        font-size: 0.70rem;
+        color: var(--ink-faint);
+      }
+
+      .contact-table td.col-val {
+        width: 100%;
+        padding: 2px 14px 12px;
+        overflow-wrap: anywhere;
+        word-break: break-all;
+        font-size: 0.84rem;
+      }
+
+      .pillar-cell {
+        padding: 1.35rem;
+      }
+    }
+
+    /* Classification bar on narrow phones */
+    @media (max-width: 520px) {
+      .classification-bar {
+        justify-content: space-between;
+        padding: 8px var(--pad-x);
+        font-size: 0.60rem;
+      }
+
+      .classification-bar > div:nth-child(3) {
+        display: none;
       }
     }
 
@@ -856,15 +1201,17 @@
           <span>Renê Caldeira</span>
         </a>
 
-        <div class="rail-portrait">
-          <img src="avatar.jpg" alt="Renê Caldeira, Enterprise IT Architect">
-        </div>
+        <div class="rail-identity">
+          <div class="rail-portrait">
+            <img src="avatar.jpg" alt="Renê Caldeira, Enterprise IT Architect">
+          </div>
 
-        <div class="rail-meta">
-          <strong>RENÊ DE OLIVEIRA CALDEIRA</strong>
-          Enterprise IT Architect (EITA)<br>
-          Lead Cloud Architect<br>
-          Product Line Architect
+          <div class="rail-meta">
+            <strong>RENÊ DE OLIVEIRA CALDEIRA</strong>
+            Enterprise IT Architect (EITA)<br>
+            Lead Cloud Architect<br>
+            Product Line Architect
+          </div>
         </div>
 
         <a href="resume.pdf" download="Resume_ReneCaldeira_en-US.pdf" class="rail-resume-btn">
@@ -1350,7 +1697,7 @@
             </tbody>
           </table>
 
-          <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 14px;">
+          <div class="contact-action-bar">
             <a href="mailto:renedeoliveiracaldeira@gmail.com" class="btn-action">
               Send an Email Directly
             </a>

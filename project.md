@@ -18,14 +18,32 @@ Repository: `https://github.com/reneCaldeira/reneCaldeiraCV.git`
 - [x] Extracted authentic photo [avatar.jpg](file:///e:/Projects/reneCaldeiraCV/avatar.jpg) directly from resume PDF.
 - [x] Extracted complete resume details (Corteva, CI&T, Veloe, Mutant, 4 degrees/MBAs, skills).
 - [x] Multi-model delegation to GPT-5.6 Terra Low for design token system and enterprise semantic architecture.
-- [x] Created comprehensive implementation plan for user review.
+- [x] Created comprehensive implementation plan and obtained review approval.
+- [x] Overhauled `index.html` into executive-grade Enterprise IT Architect CV.
+- [x] Validated HTML syntax, links, and assets locally.
+- [x] Committed changes to git and pushed to `origin/main`.
+- [x] Deployed live `index.html` and `avatar.jpg` to `renecaldeira.com.br` via `ROC-namecheap` FTPS.
+- [x] Overhauled theme using `taste-skill` and `frontend-design` to eliminate AI clichés (neon gradients, glowing meshes, pill badges, emojis).
+- [x] Implemented Swiss Architectural Dossier layout (asymmetric rail + ledger, hairline rules, monochrome + architectural copper accent).
+- [x] Updated academic degree progression (Bachelor in Telecom Eng. + Associate in Software Eng. + 2 MBAs).
+- [x] Updated metrics matrix: Changed LATAM to CLOUD (Private/Public cloud scope: AWS, Azure, on-premises and IBM Private cloud).
+- [x] Replaced all mentions of ChatGPT with "Enterprise IA projects".
+- [x] Updated English proficiency label to "Fluent".
+- [x] Cropped and zoomed portrait photo to focus closely on face with natural framing.
+- [x] Changed metrics table label from "4 DEGREES" to "DEGREES".
+- [x] Added `resume.pdf` to the repository and deployed live to `renecaldeira.com.br/resume.pdf`.
+- [x] Added direct download links and buttons in the Left Monograph Rail, Hero Action Bar, and Contact section.
+- [x] Committed to git, pushed to GitHub remote, and deployed live to `renecaldeira.com.br`.
 
 ## 4. Active Tasks
-- [ ] Await user approval on [implementation_plan.md](file:///C:/Users/rened/.gemini/antigravity/brain/e1c1b262-5565-46e8-a758-324425019064/implementation_plan.md).
-- [ ] Execute code overhaul of `index.html` with external model delegation.
-- [ ] Validate locally, commit to git, and deploy to `renecaldeira.com.br`.
+- [x] Upload resume PDF and place download links across the site.
+- [x] Deploy live to `renecaldeira.com.br`.
+- [ ] Await user feedback.
 
 ## 5. Recent Model Delegation Results
-- Delegated design tokens and architectural structure to GPT-5.6 Terra Low (`poyo_terra_low`), generating modern obsidian/azure design system.
+- Delegated copy review to GPT-5.6 Luna (`poyo_luna`). Applied exact updates to index.html with automated syntax validation and remote FTPS deployment.
+
+
+
 
 
