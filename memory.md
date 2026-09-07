@@ -1,17 +1,18 @@
 # System Memory: reneCaldeiraCV
 
 ## Model Performance Metrics & Error Tracking
-- GPT-5.6 Luna Errors: 1 (MCP 3m timeout on large HTML generation)
-- GPT-5.6 Terra Errors: 2 (Terra Low maintenance response, Terra Medium 3m timeout)
+- GPT-5.6 Luna Errors: 1 (MCP timeout during initial redesign)
+- GPT-5.6 Terra Errors: 2 (Initial timeouts in earlier session; Terra Low succeeded on mobile responsiveness task with 0 errors)
 - GPT-5.6 Sol Errors: 1 (Timeout > 180s on PoYo gateway during high-effort prompt)
 - Gemini Fallback Fixes: 1 (Final Fallback triggered per Escalation Ladder)
-- Dynamic Model Routing: Escalation Ladder exhausted (Terra Low -> Terra Medium -> Sol -> Luna -> Gemini Direct Fix). Gemini orchestrator executing direct implementation.
+- Recent Delegation: GPT-5.6 Terra Low (`poyo_terra_low`) successfully generated responsive media query recommendations. Verified and enhanced by Gemini.
 
-## Session State & Configuration
-- Status: Synced with GitHub repository `https://github.com/reneCaldeira/reneCaldeiraCV.git` on branch `main`.
-- Deployed: `index.html` uploaded and live on `https://renecaldeira.com.br/` (FTPS via `ROC-namecheap`).
-- Candidate Identity: Renê Caldeira, Enterprise IT Architect (EITA) / Lead Cloud Architect / Product Line Architect.
-- Extracted Asset: `avatar.jpg` (272x483 authentic portrait extracted from Resume PDF).
-- Active Framework: Multi-Model Delegation, Escalation, and Memory Framework active.
-- Current files: `index.html`, `project.md`, `poyo_context.md`, `memory.md`.
-- Active Framework: Multi-Model Delegation, Escalation, and Memory Framework active.
+## Resolved Bugs & System State
+- Bug Resolved (Mobile Stacking & Overflow):
+  - Fixed 800px desktop sidebar stacking above hero on mobile viewports (<860px). Transformed into a compact 72px avatar + identity header and a horizontal scrollable chip nav bar.
+  - Fixed hero action buttons and role pills wrapping / horizontal overflow on screens 360px–430px.
+  - Fixed `.data-matrix` table squeezing on mobile: converted to architectural card ledger rows with cadmium copper accents.
+  - Fixed `.contact-table` email overflow by stacking labels and values with `word-break: break-all`.
+  - Fixed top classification bar text collision on narrow screens (<520px) by hiding the third column.
+- Live Deployment: Synced and deployed to `https://renecaldeira.com.br/` via `ROC-namecheap` FTPS.
+- Repository: Clean and pushed to `https://github.com/reneCaldeira/reneCaldeiraCV.git` on branch `main`.
